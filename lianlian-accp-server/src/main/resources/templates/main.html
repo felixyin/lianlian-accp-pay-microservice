@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+
+    <!-- Vendor styles -->
+    <link href="material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="animate.min.css" rel="stylesheet">
+    <link href="jquery.scrollbar.css" rel="stylesheet">
+
+    <!-- App styles -->
+    <link href="app.min.css" rel="stylesheet">
+    <style rel="stylesheet">
+        .my-pre {
+            max-width: 400px;
+            max-height: 200px;
+        }
+
+        .my-hide {
+            display: none;
+        }
+    </style>
+</head>
+
+<body data-ma-theme="green">
+<div class="odm_extension image_downloader_wrapper" data-v-7e2550d6=""><!----></div>
+<main class="main">
+    <div class="page-loader" style="display: none;">
+        <div class="page-loader__spinner">
+            <svg viewBox="25 25 50 50">
+                <circle cx="50" cy="50" fill="none" r="20" stroke-miterlimit="10" stroke-width="2"></circle>
+            </svg>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+            <div class="navigation-trigger__inner">
+                <i class="navigation-trigger__line"></i>
+                <i class="navigation-trigger__line"></i>
+                <i class="navigation-trigger__line"></i>
+            </div>
+        </div>
+
+        <div class="header__logo hidden-sm-down">
+            <h1><a href="http://en.nongmushop.com/index.html">支付微服务-报文查询系统</a></h1>
+        </div>
+
+        <form class="search">
+            <div class="search__inner">
+                <input class="search__text" id="fullSearch" placeholder="全库搜索" type="text">
+                <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+            </div>
+        </form>
+
+    </header>
+
+    <aside class="sidebar">
+        <div class="scroll-wrapper scrollbar-inner" style="position: relative;">
+            <div class="scrollbar-inner scroll-content scroll-scrolly_visible"
+                 style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 473.25px;">
+                <div class="user">
+                    <div class="user__info">
+                        <img alt="" class="user__img" src="2.jpg">
+                        <div>
+                            <div class="user__name">尹彬</div>
+                            <div class="user__email">17554153785</div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="navigation">
+                    <li class="navigation__active"><a href="#"><i class="zmdi zmdi-home"></i> 支付报文查询</a></li>
+                    <li><a href="#"><i class="zmdi zmdi-home"></i> 支付调用链路</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </aside>
+
+    <section class="content">
+        <div class="spinner-border m-5" id="my-loading" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">报文查询</h4>
+                <!--                <h6 class="card-subtitle">全局搜索。。。。布拉布拉布拉！！！.</h6>-->
+
+                <div class="table-responsive">
+                    <div class="dataTables_wrapper" id="data-table_wrapper">
+                        <div class="dataTables__top">
+                            <table aria-describedby="data-table_info" class="table table-bordered dataTable"
+                                   id="data-table"
+                                   role="grid">
+                                <thead class="thead-default">
+                                <tr role="row">
+                                    <th aria-controls="data-table" aria-label="Name: activate to sort column descending"
+                                        aria-sort="ascending" class="sorting_asc"
+                                        colspan="1"
+                                        rowspan="1" style="width: 100px;"
+                                        tabindex="0">时间
+                                    </th>
+                                    <th aria-controls="data-table"
+                                        aria-label="Position: activate to sort column ascending" class="sorting"
+                                        colspan="1" rowspan="1"
+                                        tabindex="0">请求地址
+                                    </th>
+                                    <th aria-controls="data-table"
+                                        aria-label="Position: activate to sort column ascending" class="sorting"
+                                        colspan="1" rowspan="1"
+                                        tabindex="0">请求描述
+                                    </th>
+                                    <th aria-controls="data-table"
+                                        aria-label="Office: activate to sort column ascending" class="sorting"
+                                        colspan="1" rowspan="1"
+                                        tabindex="0">请求报文
+                                    </th>
+                                    <th aria-controls="data-table" aria-label="Age: activate to sort column ascending"
+                                        class="sorting" colspan="1" rowspan="1"
+                                        tabindex="0">返回报文
+                                    </th>
+                                    <th aria-controls="data-table"
+                                        aria-label="Start date: activate to sort column ascending" class="sorting"
+                                        colspan="1" rowspan="1"
+                                        tabindex="0">异步通知报文
+                                    </th>
+                                    <!--                                    <th class="sorting" tabindex="0" aria-controls="data-table" rowspan="1" colspan="1"-->
+                                    <!--                                        aria-label="Salary: activate to sort column ascending">操作-->
+                                    <!--                                    </th>-->
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                <tr>
+                                    <th colspan="1" rowspan="1">时间</th>
+                                    <th colspan="1" rowspan="1">请求地址</th>
+                                    <th colspan="1" rowspan="1">请求描述</th>
+                                    <th colspan="1" rowspan="1">请求报文</th>
+                                    <th colspan="1" rowspan="1">返回报文</th>
+                                    <th colspan="1" rowspan="1">异步通知报文</th>
+                                    <!--                                    <th rowspan="1" colspan="1">操作</th>-->
+                                </tr>
+                                </tfoot>
+
+                                <tbody></tbody>
+                            </table>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer hidden-xs-down">
+                <p>森麒麟版权所有</p>
+            </footer>
+        </div>
+
+        <div class="card" style="display: none;"><br><br><br>
+            <center>TODO，正在抓紧开发中。。。。</center>
+        </div>
+
+    </section>
+    <div class="position-fixed bottom-0 right-0 p-3" style="z-index: 5; right: 0; bottom: 0;">
+        <div aria-atomic="true" aria-live="assertive" class="toast hide" data-delay="2000" id="liveToast" role="alert">
+            <div class="toast-header">
+                <strong class="mr-auto">提示</strong>
+                <button aria-label="Close" class="ml-2 mb-1 close" data-dismiss="toast" type="button">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="toast-body">
+                双击报文区域，可显示原报文信息
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Javascript -->
+<!-- Vendors -->
+<script src="jquery.min.js"></script>
+<script src="popper.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script src="jquery.scrollbar.min.js"></script>
+<script src="jquery-scrollLock.min.js"></script>
+
+<!-- Vendors: Data tables -->
+<script src="jquery.dataTables.min.js"></script>
+<script src="dataTables.buttons.min.js"></script>
+<script src="buttons.print.min.js"></script>
+<script src="jszip.min.js"></script>
+<script src="buttons.html5.min.js"></script>
+
+<!-- App functions and actions -->
+<script src="app.min.js"></script>
+
+<div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+    <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+</div>
+</body>
+</html>

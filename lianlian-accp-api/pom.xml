@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>lianlian-accp-pay-microservice</artifactId>
+        <groupId>com.qdqtrj.lianlian.accp</groupId>
+        <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <description>连连Accp支付微服务Fegin client api，调用Accp支付需要依赖此包</description>
+
+    <artifactId>lianlian-accp-api</artifactId>
+
+    <dependencies>
+
+    </dependencies>
+</project>

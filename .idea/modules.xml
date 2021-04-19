@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/biz-example-server/biz-example-server.iml" filepath="$PROJECT_DIR$/biz-example-server/biz-example-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lianlian-accp-api/lianlian-accp-api.iml" filepath="$PROJECT_DIR$/lianlian-accp-api/lianlian-accp-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lianlian-accp-pay-module.iml" filepath="$PROJECT_DIR$/lianlian-accp-pay-module.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lianlian-accp-server/lianlian-accp-server.iml" filepath="$PROJECT_DIR$/lianlian-accp-server/lianlian-accp-server.iml" />
+    </modules>
+  </component>
+</project>

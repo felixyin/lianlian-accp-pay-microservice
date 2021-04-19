@@ -1,0 +1,30 @@
+server:
+  port: 8000
+  servlet:
+    context-path: /
+spring:
+  thymeleaf:
+    cache: false
+    check-template-location: true
+    enabled: true
+    mode: HTML5
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+    suffix: .html
+  application:
+    name: lianlian-accp-server
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+#        lianlian-accp-dev.yaml 配置在 application.yaml
+#      config:
+#        server-addr: 127.0.0.1:8848
+#        file-extension: yaml
+#        prefix: accp-pay-provider
+#        extension-configs:
+#          - dataId: lianlian-accp-dev.yaml
+#            refresh: true
