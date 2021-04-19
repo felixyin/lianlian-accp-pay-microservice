@@ -2,6 +2,9 @@
 
 本项目是针对连连支付ACCP产品的java SpringCloud的实现。
 
+- Java版本：https://github.com/felixyin/lianlianpay-accp-sdk
+- SpringCloud版本：https://github.com/felixyin/lianlian-accp-pay-microservice
+
 ## 一、环境
 
 1. java11
@@ -32,7 +35,3 @@ accp:
 ## 四、接口鉴权
 
 TODO，接口鉴权请在你的gateway微服务中自行实现
-
-## 五、非SpringCloud微服务版本
-
-https://github.com/felixyin/lianlianpay-accp-sdk
